@@ -23,10 +23,13 @@ Automatizácia tak prináša nielen významnú administratívnu úsporu, ale aj 
 
 ## *Pohľad zamestnanca*
 
-Pre zamestnanca je celý proces veľmi jednoduchý a vyžaduje len minimálny zásah. Každý piatok ráno dostane schvaľovateľ email s odkazom na Excel súbor a inštrukciami na kontrolu aktuálnych kurzov a vypočítaných cien. Po overení údajov stačí zmeny uložiť a následne požiadavku schváliť alebo zamietnuť prostredníctvom schvaľovacieho emailu. 
+Pre zamestnanca je celý proces veľmi jednoduchý a vyžaduje len minimálny zásah. Každý piatok ráno dostane schvaľovateľ email s odkazom na Excel súbor a inštrukciami na kontrolu aktuálnych kurzov a vypočítaných cien. Po overení údajov stačí zmeny uložiť a následne požiadavku schváliť alebo zamietnuť prostredníctvom schvaľovacieho emailu.:
+
+<img width="1022" height="785" alt="image" src="https://github.com/user-attachments/assets/52e9ebb6-941b-4d5d-a778-c8d459fc10f6" />
 
 
 Po schválení sa už o všetko ostatné postará automatizácia:
+
 •	prenesie schválené údaje do cenníka,
 
 •	pripraví finálny cenník na nasledujúci týždeň,
@@ -76,11 +79,12 @@ Pošle sa email zákazníkovi s cenníkom s cenami na ďalší týždeň.
 Zbehne excel script a spraví kopiu aktuálneho Cenníka. Zákazník aj firma si vedia pomocou týchto kopií pozrieť historické ceny.
 Ako posledný článok flowu je email, ktorý sa odošle, ak vo flowe nastane chyba, zasekne sa a pod. a finalny email s cenníkom sa všetkým zákazníkom nepošle. Funguje ako automatická kontrola :)
 
-## Problémy počas tvorby, negatíva
-1.) Ako prvý problém vnímam, manuálne otvorenie excel súboru s kurzom, nakoľko excel nedokáže dáta obnovovať ak nie je daný súbor otvorený. To sa ale prirodzene poriešilo kontrolou zamestanca, ktorú treba vykonať, hlavne čo sa týka zmien a kontrola marží. Zo skúseností, marže sa menia veľmi často, tak súbor by bol otváraný bez ohladu na "problém" s kurzom. Pomerne detailom, je podmienka zakliknutia "enable content" aby sa kurz obnovil. Toto som poriešila postupom v approvali aby sa zabezpečil plynulý chod.
+## Na zamyslenie
+1.) Ako prvý problém vnímam, manuálne otvorenie excel súboru s kurzom, nakoľko excel nedokáže dáta obnovovať ak nie je daný súbor otvorený. <ins>To sa ale prirodzene poriešilo kontrolou zamestanca,</ins> ktorú treba vykonať, hlavne čo sa týka zmien a kontrola marží. Zo skúseností, marže sa menia veľmi často, tak súbor by bol otváraný bez ohladu na "problém" s kurzom. Pomerne detailom, je podmienka zakliknutia "enable content" aby sa kurz obnovil. Toto som poriešila postupom v approvali aby sa zabezpečil plynulý chod.
 
-2.) Vo všeobecnosti, automatizácia a Power-automate sú veľmi citlivé na detaly a chyba napr. vo veľkom/malom pismene vedia flow zastaviť. V mojom prípade je flow cielene spravený tak, aby sa možnostiam pochybenia človeka úplne vyhlo a prenechali sme to na softvér. Problém môže nasťať len keď hlási chybu Microsoft. :)
+2.) Vo všeobecnosti, automatizácia a Power-automate sú veľmi citlivé na detaly a chyba napr. vo veľkom/malom pismene vedia flow zastaviť. <ins>V mojom prípade je flow cielene spravený tak, aby sa možnostiam pochybenia človeka úplne vyhlo </ins> a prenechali sme to na softvér. Problém môže nasťať len keď hlási chybu Microsoft. :)
 
+3.) Flow sa vždy spustí v piatok, ako postupovať ak v piatok je sviatok?
 
 
 
