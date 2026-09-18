@@ -1,0 +1,1 @@
+# Automatizacia_procesu_tvorby_a_distribucie_cennikov
